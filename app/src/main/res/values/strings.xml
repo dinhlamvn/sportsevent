@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Sports Event</string>
+    <string name="title_activity_teams">Teams</string>
+    <string name="teams">Teams</string>
+    <string name="matches">Matches</string>
+    <string name="participating_teams">Participating Teams</string>
+    <string name="matches_previous">Previous Matches</string>
+    <string name="matches_upcoming">Upcoming Matches</string>
+    <string name="vs">vs</string>
+    <string name="matches_home">Home: %s</string>
+    <string name="matches_away">Away: %s</string>
+    <string name="matches_winner">Winner: %s</string>
+    <string name="matches_highlights">Hilights: %s</string>
+    <string name="matches_date">Date: %s</string>
+    <string name="empty_data">Empty data</string>
+    <string name="team_id_not_found">Team ID not found</string>
+    <string name="no_app_resolve_action">No app resolve this action</string>
+    <string name="grant_permission_warning">Please grant permission for app</string>
+    <string name="default_notification_channel_id">app_default_channel_id</string>
+    <string name="matches_upcoming_notification_title">Upcoming Matches</string>
+    <string name="schedule_reminder_success">Set reminder success</string>
+    <string name="title_activity_team_matches">Team Matches</string>
+</resources>
