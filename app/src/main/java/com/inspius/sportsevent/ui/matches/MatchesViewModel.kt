@@ -1,5 +1,6 @@
 package com.inspius.sportsevent.ui.matches
 
+import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.viewModelScope
 import com.inspius.sportsevent.base.BaseViewModel
 import com.inspius.sportsevent.extensions.parseHttpException
@@ -36,6 +37,11 @@ class MatchesViewModel(
                 )
             }
         }
+    }
+
+    @VisibleForTesting
+    fun getMatchesTest(matchesType: MatchesType) {
+        getMatches(matchesType)
     }
 
     fun updateMatchesType(matchesType: MatchesType) {

@@ -34,21 +34,29 @@ android {
         create("develop") {
             applicationIdSuffix = ".dev"
             dimension = "default"
-            buildConfigField("String", "API_URL", "\"https://jmde6xvjr4.execute-api.us-east-1.amazonaws.com/\"")
+            buildConfigField(
+                "String",
+                "API_URL",
+                "\"https://jmde6xvjr4.execute-api.us-east-1.amazonaws.com/\""
+            )
         }
 
         create("production") {
             dimension = "default"
-            buildConfigField("String", "API_URL", "\"https://jmde6xvjr4.execute-api.us-east-1.amazonaws.com/\"")
+            buildConfigField(
+                "String",
+                "API_URL",
+                "\"https://jmde6xvjr4.execute-api.us-east-1.amazonaws.com/\""
+            )
         }
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_11.toString()
     }
     buildFeatures {
         viewBinding = true
@@ -61,10 +69,11 @@ dependencies {
     val junitVersion = "4.13.2"
     val mockitoVersion = "5.6.0"
     val mockitoKotlinVersion = "5.1.0"
-    val mockkVersion = "1.13.8"
+    val coroutinesVersion = "1.6.4"
     testImplementation("junit:junit:$junitVersion")
     testImplementation("org.mockito:mockito-core:$mockitoVersion")
     testImplementation("org.mockito.kotlin:mockito-kotlin:$mockitoKotlinVersion")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion")
 
     // AndroidX
     val appcompatVersion = "1.6.1"
@@ -93,7 +102,7 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
 
     // Coroutine
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
 
     // Glide
     val glideVersion = "4.13.2"
